@@ -17,6 +17,7 @@ schema_view = get_schema_view(
         contact=openapi.Contact(email='safe@gnosis.io'),
         license=openapi.License(name='MIT License'),
     ),
+    url="http://localhost:8000",
     validators=['flex', 'ssv'],
     public=True,
     permission_classes=[permissions.AllowAny],
