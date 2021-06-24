@@ -4,8 +4,8 @@
 
 DJANGO_SECRET_KEY=$(docker run --rm python:3.9.3-slim-buster bash -c "python3 -c 'import secrets; print(secrets.token_hex(50))'")
 
-read -p "ETHEREUM_NODE_URL:" ETHEREUM_NODE_URL
-read -p "ETHEREUM_TRACING_NODE_URL:" ETHEREUM_TRACING_NODE_URL  
+read -p "ETHEREUM_NODE_URL (e.g., http://172.17.0.1:4444):" ETHEREUM_NODE_URL
+read -p "ETHEREUM_TRACING_NODE_URL (e.g., http://172.17.0.1:4444):" ETHEREUM_TRACING_NODE_URL  
 
 # From env.tracing.sample, we set the following variables:
 # DJANGO_SECRET_KEY=$DJANGO_SECRET_KEY
