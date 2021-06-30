@@ -9,6 +9,7 @@ else
     log_level="info"
 fi
 
-sleep 10
+# we replace the original value (10 seconds), since that they are not enough on our instances
+sleep 60
 echo "==> $(date +%H:%M:%S) ==> Running Celery beat <=="
 exec celery -A config.celery_app beat -S django_celery_beat.schedulers:DatabaseScheduler --loglevel $log_level
